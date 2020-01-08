@@ -1,9 +1,15 @@
+/* app */
+
+.app {
+  min-height: 100vh;
+}
+
 /* Header */
 
 .header {
   text-align: center;
   text-transform: uppercase;
-  margin: 6vh 0;
+  padding: 6vh 0;
 
   h3 {
     font-size: 4vh;
@@ -21,6 +27,16 @@
 
 .addProject {
   text-align: center;
+}
+
+/* copyright */
+
+.copyright {
+  text-align: center;
+  font-size: 1.6vh;
+  font-weight: 500;
+  margin: 2vh 0;
+  color: #fff;
 }
 
 
