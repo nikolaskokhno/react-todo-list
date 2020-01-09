@@ -9,7 +9,7 @@
 .header {
   text-align: center;
   text-transform: uppercase;
-  padding: 6vh 0;
+  padding: 4vh 0;
 
   h3 {
     font-size: 4vh;
@@ -21,6 +21,88 @@
     font-size: 2.5vh;
     font-weight: 300;
   }
+}
+
+/* project */
+
+.project-list {
+  min-height: 72vh;
+
+  h5 {
+    text-align: center;
+    margin: 0 5vh;
+    padding-top: 25vh;
+    color: #fff;
+    font-size: 2.2vh;
+  }
+
+  .project {
+    font-size: 2vh;
+    cursor: pointer;
+
+    i {
+      font-size: 1.8vh;
+      margin: 0 1.2vh;
+    }
+
+    .project-header {
+      padding: 1vh;
+
+      i {
+        color: #616161;
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+
+    .project-tools {
+      display: none;
+
+      i {
+        color: #e0e0e0;
+        margin: 0 1vh;
+      }
+
+      .line {
+        border-right: 1px solid #e0e0e0;
+        padding-right: 2vh;
+      }
+    }
+
+    :hover .project-tools {
+      display: block;
+    }
+
+    .add-task {
+      padding: 1vh;
+
+      i {
+        padding: 0;
+        font-size: 2.2vh;
+        padding-top: 0.7vh;
+      }
+
+      input {
+        background-color: #fff;
+        margin: 0;
+        height: 3.2vh;
+        border: 1px solid transparent;
+      }
+    }
+
+    .task-list {
+      border-radius: 0 0 1vh 1vh;
+
+      p {
+        font-size: 1.6vh;
+        padding: 5vh;
+        text-align: center;
+      }
+    }
+  }
+
 }
 
 /* button add */
@@ -35,7 +117,7 @@
   text-align: center;
   font-size: 1.6vh;
   font-weight: 500;
-  margin: 2vh 0;
+  padding: 2vh 0;
   color: #fff;
 }
 
