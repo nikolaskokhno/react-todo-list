@@ -1,4 +1,5 @@
 import React from 'react';
+import TaskList from '../Task/TaskList';
 
 const Project = () => {
 
@@ -35,7 +36,8 @@ const Project = () => {
             </div>
 
             <div className="task-list col s12 #fafafa grey lighten-5">
-                <p>No nones. Add a new note to the form above.</p>
+                {/* <p>No nones. Add a new note to the form above.</p> */}
+                <TaskList />
             </div>
 
         </div>

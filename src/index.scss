@@ -38,7 +38,6 @@
 
   .project {
     font-size: 2vh;
-    cursor: pointer;
 
     i {
       font-size: 1.8vh;
@@ -47,6 +46,7 @@
 
     .project-header {
       padding: 1vh;
+      cursor: pointer;
 
       i {
         color: #616161;
@@ -100,9 +100,19 @@
         padding: 5vh;
         text-align: center;
       }
+
+      .task {
+        margin: 1vh 0;
+
+        .task-tools {
+          display: none;
+        }
+      }
+      :hover .task-tools {
+        display: block;
+      }
     }
   }
-
 }
 
 /* button add */
@@ -120,5 +130,3 @@
   padding: 2vh 0;
   color: #fff;
 }
-
-
