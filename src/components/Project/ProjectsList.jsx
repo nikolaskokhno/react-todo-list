@@ -12,7 +12,11 @@ const ProjectList = () => {
             {
                  projects.length !== null
                     ? projects.map((project) => (
-                        <Project key={project.id} title={project.title} />
+                        <Project 
+                            key={project.id}
+                            id={project.id}
+                            title={project.title} 
+                        />
                     ))
                     : <h5>Unfortunately there are no new projects, click the button below to add!</h5>
             }

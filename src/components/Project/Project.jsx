@@ -1,7 +1,22 @@
 import React from 'react';
+import firebase from '../../firebase';
 import TaskList from '../Task/TaskList';
 
+
 const Project = (props) => {
+
+    const deleteProject = (e) => {
+        e.preventDefault();
+    
+        firebase
+            .firestore()
+            .collection('projects')
+            .doc(props.id)
+            .delete()
+            .then(() => {
+                alert('Delete success')
+            })
+    }
 
     return (
         <div className="project z-depth-4 row">
@@ -9,11 +24,11 @@ const Project = (props) => {
             <div className="project-header col s12 #0288d1 light-blue darken-2">
                 <div className="project-title left">
                     <i className="fas fa-align-right"></i>
-                    <span>{props.title}</span>
+                    <span>{props.title + props.id}</span>
                 </div>
                 <div className="project-tools right">
                     <i className="fas fa-pen line"></i>
-                    <i className="far fa-trash-alt"></i>
+                    <i onClick={deleteProject} className="far fa-trash-alt"></i>
                 </div>
             </div>
 
