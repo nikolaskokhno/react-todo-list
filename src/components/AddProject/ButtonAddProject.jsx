@@ -1,6 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
+import firebase from '../../firebase';
 
 const ButtonAddProject = () => {
+    const [title, setTitle] = useState('');
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        firebase
+            .firestore()
+            .collection('projects')
+            .add({
+                title
+            })
+            .then(() => {
+                setTitle('');
+            })
+    }
 
     return (
         <div className="addProject col s12">
@@ -8,6 +24,14 @@ const ButtonAddProject = () => {
                 <i className="material-icons left">add</i>
                 Add todo project
             </div>
+            <form onSubmit={onSubmit}>
+                <input 
+                    type="text"
+                    value={title} 
+                    onChange={e => setTitle(e.currentTarget.value)} 
+                />
+                <input type="submit"/>
+            </form>
         </div>
     );
 }

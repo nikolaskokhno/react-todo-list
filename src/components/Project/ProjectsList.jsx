@@ -10,7 +10,7 @@ const ProjectList = () => {
     return (
         <div className="project-list col s12">
             {
-                 projects.length !== 0
+                 projects.length !== null
                     ? projects.map((project) => (
                         <Project key={project.id} title={project.title} />
                     ))
